@@ -30,7 +30,7 @@ app.get( '*', ( req, res ) => {
     res.sendFile( path.resolve( __dirname, 'public/index.html') );
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`Servidor express en puerto ${process.env.PORT}`);
+app.listen(process.env.PORT || process.env.ENV_EXPRESS_PORT, () => {
+    console.log(`Servidor express en puerto ${process.env.PORT || process.env.ENV_EXPRESS_PORT}`);
 });
 
